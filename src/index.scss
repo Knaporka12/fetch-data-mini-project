@@ -20,7 +20,7 @@ h1, section{
     text-align: center;
 }
 
-body, .App, #root{
+body, .App, #root, .main{
     @include flex-center;
     flex-flow: column nowrap;
 }
@@ -50,6 +50,7 @@ body{
 .nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 2rem;
 
     &__btn{
         @include flex-center;
@@ -67,6 +68,15 @@ body{
 }
 
 .main{
-    @include flex-center;
     flex-grow: 1;
+    gap: 2rem;
+
+    &__ul{
+        width: 90%
+    }
+
+    &__li{
+        margin: 0.75rem 0rem;
+        border-bottom: 2px dashed $font-color;
+    }
 }

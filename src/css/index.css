@@ -10,7 +10,7 @@ h1, section {
   text-align: center;
 }
 
-body, .App, #root {
+body, .App, #root, .main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,6 +41,7 @@ body {
 .nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 2rem;
 }
 .nav__btn {
   display: flex;
@@ -58,8 +59,13 @@ body {
 }
 
 .main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-grow: 1;
+  gap: 2rem;
+}
+.main__ul {
+  width: 90%;
+}
+.main__li {
+  margin: 0.75rem 0rem;
+  border-bottom: 2px dashed #000;
 }/*# sourceMappingURL=index.css.map */

@@ -1,24 +1,28 @@
 import React from 'react'
+import NavButton from './NavButton.js'
 
-const Nav = ({handleBtnColor, buttonCheck}) => {
+const Nav = ({handleBtnColor, setRequestType, buttons}) => {
   return (
 
     <nav className='nav'>
-    
-        <button className='nav__btn'
-            style={{backgroundColor: buttonCheck[0].checked ?'#0047AB' : 'white' }}
-            onClick={() => {handleBtnColor(1)}}
-        >Users</button>
-     
-        <button className='nav__btn'
-            style={{backgroundColor: buttonCheck[1].checked ?'#0047AB' : 'white' }}
-            onClick={() => {handleBtnColor(2)}}
-        >Posts</button>
-     
-        <button className='nav__btn'
-            style={{backgroundColor: buttonCheck[2].checked ?'#0047AB' : 'white' }}
-            onClick={() => {handleBtnColor(3)}}
-        >Something</button>
+
+      {buttons.map((button) => {
+        
+        return (
+
+          <NavButton
+
+            key={button.id}
+            handleBtnColor={handleBtnColor}
+            setRequestType={setRequestType}
+            buttons={buttons}
+            id={button.id}
+
+          ></NavButton>
+
+        )
+
+      })}
 
     </nav>
 
