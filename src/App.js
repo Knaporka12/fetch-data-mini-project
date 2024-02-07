@@ -29,6 +29,7 @@ function App() {
   const [content, setContent] = useState([]);
   const [requestType, setRequestType] = useState('');
   const [fetchError, setfetchError] = useState(null);
+  const [isDataLoading, setIsDataLoading] = useState(false);
 
   const handleBtnColor = (btnId) => {
 
@@ -66,17 +67,27 @@ function App() {
 
     const fetchAndSetContent = async () => {
 
-      try {
+      if (requestType){
 
-        const [data, errorMsg] = await request(API_KEY, {}, requestType);
-        console.log(errorMsg);
-        if (!data.ok) throw Error(errorMsg);
-        const dataJson = await data.json();
-        setfetchError(null);
-        setContent(dataJson);
+        setIsDataLoading(true);
 
-      } catch (err) {
-        setfetchError(err.msg);
+        setTimeout (async() => {
+          
+          try {
+
+          const [data, errorMsg] = await request(API_KEY, {}, requestType);
+          if (errorMsg) throw Error('Did not receive data - refresh the page')
+          const dataJson = await data.json();
+          setfetchError(null);
+          setContent(dataJson);
+
+          } catch (err) {
+            setfetchError(err.message);
+          } finally {
+            setIsDataLoading(false);
+          }
+        }, 1000)
+
       }
 
     }
@@ -99,16 +110,17 @@ function App() {
 
       <main className='main'>
 
-        {content.length && <h2 className="main__h2">Searching results: </h2> }
+        {(fetchError && !isDataLoading) && <h2 style={{color: 'red'}} className="main__h2">{fetchError}</h2>}
 
-        {content.length && 
+        {isDataLoading && <h2 style={{color: 'blue'}} className="main__h2">Loading the data...</h2>}
+
+        {(content.length > 0 && !isDataLoading) && <h2 className="main__h2">Searching results: </h2> }
+
+        {(content.length > 0 && !isDataLoading) && 
 
           <ContentList content={content}></ContentList> 
 
         }
-
-
-        
 
       </main>
 

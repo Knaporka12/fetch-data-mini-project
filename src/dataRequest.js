@@ -10,7 +10,7 @@ const request = async (url = '', requestObj = {}, dataType = '', errorMsg = null
        
 
     } catch (err) {
-        errorMsg = err.msg;
+        errorMsg = err.message;
         console.log(errorMsg);
     } finally {
         return [data, errorMsg];
