@@ -39,7 +39,7 @@ body{
 }
 
 .header{
-    margin-bottom: 2rem;
+    margin: 2rem 0rem;
 
     &__h1{
         font-size: 4rem;
@@ -80,7 +80,17 @@ body{
     }
 
     &__li{
-        margin: 0.75rem 0rem;
+        margin: 1.25rem 0rem;
         border-bottom: 2px dashed $font-color;
+    }
+
+    &__table{
+        border: none;
+        border-spacing: 0.75rem 1rem;
+    }
+
+    &__td {
+        text-align: center;
+        border: 2px solid $border-color;
     }
 }

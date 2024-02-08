@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header.js';
 import Nav from './Nav.js';
 import ContentList from './ContentList.js';
+import ContentTable from './ContentTable.js';
 import { useState, useEffect } from 'react'; 
 import request from './dataRequest.js';
 
@@ -86,7 +87,7 @@ function App() {
           } finally {
             setIsDataLoading(false);
           }
-        }, 1000)
+        }, 500)
 
       }
 
@@ -118,7 +119,7 @@ function App() {
 
         {(content.length > 0 && !isDataLoading) && 
 
-          <ContentList content={content}></ContentList> 
+          <ContentTable content={content}></ContentTable> 
 
         }
 

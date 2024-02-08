@@ -31,7 +31,7 @@ body {
 }
 
 .header {
-  margin-bottom: 2rem;
+  margin: 2rem 0rem;
 }
 .header__h1 {
   font-size: 4rem;
@@ -69,6 +69,14 @@ body {
   width: 90%;
 }
 .main__li {
-  margin: 0.75rem 0rem;
+  margin: 1.25rem 0rem;
   border-bottom: 2px dashed #000;
+}
+.main__table {
+  border: none;
+  border-spacing: 0.75rem 1rem;
+}
+.main__td {
+  text-align: center;
+  border: 2px solid #0047AB;
 }/*# sourceMappingURL=index.css.map */

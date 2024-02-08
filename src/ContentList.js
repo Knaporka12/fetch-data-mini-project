@@ -12,10 +12,8 @@ const ContentList = ({content}) => {
         return (
 
           <ListItem
-
             key={contentObj.id}
             contentObj={contentObj}
-
           ></ListItem>
 
         )
