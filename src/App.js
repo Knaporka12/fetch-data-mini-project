@@ -111,6 +111,8 @@ function App() {
 
       <main className='main'>
 
+        {(!fetchError && !isDataLoading && content.length === 0) && <h2 style={{color: 'blue'}} className="main__h2">Choose the data from above</h2>}
+
         {(fetchError && !isDataLoading) && <h2 style={{color: 'red'}} className="main__h2">{fetchError}</h2>}
 
         {isDataLoading && <h2 style={{color: 'blue'}} className="main__h2">Loading the data...</h2>}

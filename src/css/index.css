@@ -39,6 +39,8 @@ body {
 }
 
 .nav {
+  position: sticky;
+  top: 0px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 2rem;
@@ -74,9 +76,9 @@ body {
 }
 .main__table {
   border: none;
-  border-spacing: 0.75rem 1rem;
 }
 .main__td {
   text-align: center;
   border: 2px solid #0047AB;
+  padding: 1.25rem 0rem;
 }/*# sourceMappingURL=index.css.map */

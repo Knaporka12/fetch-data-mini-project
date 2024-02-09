@@ -5,28 +5,25 @@ const TableRow = ({contentObj}) => {
 
   const iterateThroughObj = (obj) =>{
 
-    return(
-
-      Object.entries(obj).map(([key, value]) => {
+    return Object.entries(obj).map(([key, value]) => {
       
-        if(typeof value === 'object' || typeof value === 'array') {
+      if(typeof value === 'object') {
 
-          return iterateThroughObj(value)
-          
-        }
+        return iterateThroughObj(value)
+        
+      }
 
-        return (
+      console.log(value);
+      return (
 
-          <TableCell 
-            key={key}
-            value={value}
-          ></TableCell>
+        <TableCell 
+          key={key}
+          value={value}
+        ></TableCell>
 
-        )
+      )
 
-      })
-
-    )
+    })
 
   }
 

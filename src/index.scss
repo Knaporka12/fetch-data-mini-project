@@ -48,6 +48,8 @@ body{
 }
 
 .nav {
+    position: sticky;
+    top: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 2rem;
@@ -86,11 +88,12 @@ body{
 
     &__table{
         border: none;
-        border-spacing: 0.75rem 1rem;
+        //border-spacing: 0.75rem 1rem;
     }
 
     &__td {
         text-align: center;
         border: 2px solid $border-color;
+        padding: 1.25rem 0rem;
     }
 }
