@@ -32,6 +32,8 @@ function App() {
   const [fetchError, setfetchError] = useState(null);
   const [isDataLoading, setIsDataLoading] = useState(false);
 
+  
+
   const handleBtnColor = (btnId) => {
 
     const updatedBtns = buttons.map((btn) => {
