@@ -6,7 +6,7 @@ const NavButton = ({handleBtnColor, setRequestType, buttons, id}) => {
     <>
 
         <button 
-
+        
           className='nav__btn'
           style={{backgroundColor: buttons[id].checked ?'#0047AB' : 'white' }}
           
