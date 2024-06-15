@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fetch-data-mini-project/static/css/main.2635a4e1.css",
+    "main.js": "/fetch-data-mini-project/static/js/main.e5315c35.js",
+    "index.html": "/fetch-data-mini-project/index.html",
+    "main.2635a4e1.css.map": "/fetch-data-mini-project/static/css/main.2635a4e1.css.map",
+    "main.e5315c35.js.map": "/fetch-data-mini-project/static/js/main.e5315c35.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2635a4e1.css",
+    "static/js/main.e5315c35.js"
+  ]
+}
